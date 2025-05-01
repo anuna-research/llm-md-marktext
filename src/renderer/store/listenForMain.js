@@ -36,6 +36,25 @@ const actions = {
     ipcRenderer.on('mt::editor-format-action', (e, { type }) => {
       bus.$emit('format', type)
     })
+  },
+
+  // Add LLM-MD listeners as a proper Vuex action
+  LISTEN_FOR_LLM_MD ({ commit, dispatch }) {
+    ipcRenderer.on('mt::llm-md-evaluate', () => {
+      bus.$emit('llm-md-evaluate')
+    })
+
+    ipcRenderer.on('mt::llm-md-parse', () => {
+      bus.$emit('llm-md-parse')
+    })
+
+    ipcRenderer.on('mt::llm-md-validate', () => {
+      bus.$emit('llm-md-validate')
+    })
+
+    ipcRenderer.on('mt::llm-md-create-new', () => {
+      bus.$emit('llm-md-create-new')
+    })
   }
 }
 

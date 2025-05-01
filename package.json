@@ -192,6 +192,22 @@
     "email": "ransixi@gmail.com",
     "url": "https://github.com/Jocs"
   },
+  "build": {
+    "files": [
+      "dist/electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "extraResources": [
+      {
+        "from": "resources/${os}",
+        "to": "Resources/bin",
+        "filter": ["**/*"]
+      }
+    ]
+  },
   "maintainer": [
     {
       "name": "Jocs",

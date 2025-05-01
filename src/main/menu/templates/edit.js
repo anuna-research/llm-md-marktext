@@ -149,6 +149,35 @@ export default function (keybindings) {
           actions.lineEnding(browserWindow, 'lf')
         }
       }]
+    }, {
+      label: 'LLM-MD',
+      submenu: [
+        {
+          label: 'Evaluate Document',
+          click: (menuItem, browserWindow) => {
+            browserWindow?.webContents.send('mt::llm-md-evaluate')
+          }
+        },
+        {
+          label: 'Parse Document',
+          click: (menuItem, browserWindow) => {
+            browserWindow?.webContents.send('mt::llm-md-parse')
+          }
+        },
+        {
+          label: 'Validate Document',
+          click: (menuItem, browserWindow) => {
+            browserWindow?.webContents.send('mt::llm-md-validate')
+          }
+        },
+        { type: 'separator' },
+        {
+          label: 'Create New LLM-MD Document',
+          click: (menuItem, browserWindow) => {
+            browserWindow?.webContents.send('mt::llm-md-create-new')
+          }
+        }
+      ]
     }]
   }
 }

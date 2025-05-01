@@ -7,5 +7,5 @@
       "common/*": ["../common/*"]
     }
   },
-  "include": ["."]
+  "include": [".", "../../../../../../var/folders/k7/rpqdyqmx06v1y3gpqnx2355m0000gn/T/!Users!anuna-01!Code!llm-md-marktext!src!main!llm-md!index.js~", "../../../../../../var/folders/k7/rpqdyqmx06v1y3gpqnx2355m0000gn/T/!Users!anuna-01!Code!llm-md-marktext!src!main!utils!binary-paths.js~", "../../../../../../var/folders/k7/rpqdyqmx06v1y3gpqnx2355m0000gn/T/!Users!anuna-01!Code!llm-md-marktext!src!main!utils!binary-paths.js~", "../../../../../../var/folders/k7/rpqdyqmx06v1y3gpqnx2355m0000gn/T/!Users!anuna-01!Code!llm-md-marktext!src!main!llm-md!ipc.js~", "../../../../../../var/folders/k7/rpqdyqmx06v1y3gpqnx2355m0000gn/T/!Users!anuna-01!Code!llm-md-marktext!src!main!llm-md!ipc.js~"]
 }

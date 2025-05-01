@@ -9,7 +9,15 @@
     <div
       ref="editor"
       class="editor-component"
-    ></div>
+    >
+    <button
+  class="button"
+  :title="'Evaluate with LLM-MD'"
+  @click="handleLlmMdEvaluate"
+>
+  <i class="icon-play"></i> LLM-MD
+</button>
+</div>
     <div
       class="image-viewer"
       v-show="imageViewerVisible"
@@ -664,6 +672,11 @@ export default {
     })
   },
   methods: {
+
+    handleLlmMdEvaluate () {
+      this.$llmMd.evaluate()
+    },
+
     photoCreatorClick: (url) => {
       shell.openExternal(url)
     },

@@ -65,4 +65,9 @@ const store = new Vuex.Store({
   }
 })
 
+store.dispatch('LISTEN_FOR_EDIT')
+store.dispatch('LISTEN_FOR_SHOW_DIALOG')
+store.dispatch('LISTEN_FOR_PARAGRAPH_INLINE_STYLE')
+store.dispatch('LISTEN_FOR_LLM_MD')
+
 export default store

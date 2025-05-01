@@ -196,6 +196,9 @@ export default {
       addStyles(style)
       this.hideLoadingPage()
     })
+  },
+  mounted () {
+    this.$llmMd.init()
   }
 }
 </script>
