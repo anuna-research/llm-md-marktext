@@ -4,3 +4,4 @@ electron  = "code2prompt ../electron/docs/api --exclude='**/structures/**' --inc
 architecture = "marktext-architecture.md"
 electron-readme = "../electron/docs/README.md"
 js-guide = "js-code-guide.md"
+style-guide = "style-guide.md"

@@ -7,345 +7,122 @@ context = "llm-md/resources/context.md"
 
 ### user >>>
 
-Create a concise Javascript code guide based on the google js code guide;
+Create a concise style guide for the UI additions to marktext, based on the following guide for llm-md;
 
-[](https://google.github.io/styleguide/jsguide.html)
-
-And the functional programming approach of our racket lang code style;
-
-[](https://codeberg.org/anuna/llm-md/raw/branch/main/llm-md/corpus/RACKET-GUIDE.md)
-
-
-### Assistant >>>
-
-```thinking
-
-Alright, so I've been asked to create a concise JavaScript code guide based on the Google JavaScript Style Guide (which is provided in the promopt) and also to incorporate a "functional programming approach" from a Racket language code style.
-
-Let me first summarize the key points of the Google JavaScript Style Guide:
-
-**Source file basics**:
-- Use UTF-8 encoding
-- Filenames should be all lowercase with underscores or dashes
-- Use `.js` extension
-- Use only ASCII horizontal space characters for whitespace (no tabs)
-- Use special escape sequences for special characters
-
-**Source file structure**:
-- License or copyright info first (if present)
-- JSDoc next (if present)
-- Module statements (like `goog.module` or ES imports and exports)
-- The file's implementation
-
-**Formatting**:
-- Use 2 spaces for indentation
-- Block indentation should be +2 spaces
-- Maximum line length: 80 characters (with some exceptions)
-- Use K&R style for braces (opening brace on same line, closing brace on new line)
-- Empty blocks may be concise: `{}`
-- Prefer to line-wrap at higher syntactic level
-- Statements end with semicolons
-- Use horizontal whitespace judiciously (after keywords, around operators, etc.)
-
-**Language features**:
-- Use `const` and `let` for variable declarations, not `var`
-- One variable per declaration
-- Declare types with JSDoc annotations when needed
-- Use array literals and object literals instead of constructors
-- Don't mix quoted and unquoted keys in objects
-- Use ES6 classes, method shorthand, and destructuring
-- Use arrow functions for nested functions
-- Use template literals for complex string concatenation
-- Use single quotes for string literals
-
-**Naming**:
-- Use camelCase for variables, functions, and methods
-- Use PascalCase for classes, interfaces, record types, typedefs, and enums
-- Use CONSTANT_CASE for constants
-- Private members may have trailing underscore
-
-**JSDoc**:
-- Use Markdown within JSDoc
-- Document parameters, return types, and other important types
-- Use JSDoc to specify visibility annotations
-- Use nullability modifiers (`!` and `?`) correctly
-
-The second part of the prompt mentions "the functional programming approach of our racket lang code style," but it doesn't actually provide any content about the Racket code style. The URL seems to point to a Racket guide, but its content isn't included in the prompt input. Since I don't have direct access to this resource, I'll incorporate general functional programming principles that are often associated with Racket:
-
-- Emphasize immutability
-- Prefer pure functions (no side effects)
-- Use higher-order functions
-- Use recursive patterns
-- Favor declarative over imperative style
-
-Now, I'll create a concise JavaScript code guide that combines the Google Style Guide with functional programming principles:
-```
-
-# Concise JavaScript Style Guide
-
-## Core Principles
-- Write clean, maintainable code
-- Favor functional programming patterns where appropriate
-- Follow consistent formatting and naming conventions
-- Use modern JavaScript features judiciously
-
-## File Basics
-- Use UTF-8 encoding with `.js` extension
-- Filenames should be lowercase with hyphens (`my-file.js`)
-- Organize files as: license → JSDoc → imports → implementation
-
-## Syntax & Formatting
-- Indent with 2 spaces, never tabs
-- 80 character line limit (except for imports/requires)
-- Use K&R style braces:
-  ```javascript
-  if (condition) {
-    doSomething();
-  } else {
-    doSomethingElse();
-  }
-  ```
-- Always use braces for control structures
-- Empty blocks may be `{}` (except in multi-block statements)
-- Always terminate statements with semicolons
-- When line-wrapping, break at higher syntactic levels
-
-## Variables & Data Structures
-- Use `const` by default, `let` when necessary, never `var`
-- One variable per declaration
-- Declare variables close to first use
-- Use trailing commas in multiline arrays/objects
-- Use array/object literals instead of constructors:
-  ```javascript
-  // Good
-  const arr = [1, 2, 3];
-  const obj = {a: 1, b: 2};
-
-  // Bad
-  const arr = new Array(1, 2, 3);
-  const obj = new Object();
-  ```
-
-## Functions
-- Prefer arrow functions for callbacks and anonymous functions
-- Use default parameters instead of conditional logic
-- Use rest parameters instead of `arguments`
-- Document parameters and return types with JSDoc
-- Apply functional programming principles:
-  ```javascript
-  // Pure function
-  const add = (a, b) => a + b;
-
-  // Higher-order function
-  const map = (fn, arr) => arr.map(fn);
-
-  // Immutability
-  const addToList = (list, item) => [...list, item];
-  ```
-
-## Classes
-- Use ES6 class syntax
-- Define all fields in the constructor
-- Use method shorthand syntax
-- Mark private fields with `@private` and optional underscore
-- Consider functional alternatives to classes where appropriate
-
-## Strings
-- Use single quotes for string literals
-- Use template literals for multiline or interpolated strings
-- Don't use line continuations with backslashes
-
-## Naming Conventions
-- `lowerCamelCase` for variables, functions, methods
-- `UpperCamelCase` for classes, interfaces, types
-- `CONSTANT_CASE` for constants
-- Private fields may have trailing underscore: `this.field_`
-
-## Modules & Imports
-- Prefer ES modules over other module systems
-- Use named exports instead of default exports
-- Keep import statements unbroken
-- Sort imports alphabetically
-
-## Documentation
-- Use JSDoc for documenting functions, classes, and types
-- Write JSDoc in Markdown syntax
-- Specify parameter and return types
-- Use `@private`, `@protected`, etc., for visibility
-- Use nullability modifiers: `!` (non-null) and `?` (nullable)
-
-## Functional Programming Practices
-- Prefer immutability (use `const`, avoid modifying objects)
-- Use pure functions that avoid side effects
-- Leverage higher-order functions like `map`, `filter`, `reduce`
-- Use composition over inheritance when possible
-- Prefer expressions over statements
-- Avoid mutation in loops; use functional alternatives
-
-## Error Handling
-- Use exceptions for exceptional conditions
-- Always throw Error objects, not literals
-- Don't leave empty catch blocks without explanation
-
-## Best Practices
-- Never use `with`, `eval()`, or non-standard features
-- Follow the principle of least surprise
-- Make your code self-documenting
-- Be consistent with existing code when making changes
-
-This guide combines Google's JavaScript style with functional programming principles to create maintainable, readable, and robust code.
+Rationale
+The llm-md identity is built around the principles of clarity,
+structure, and minimalism—mirroring the purpose of the
+tool itself: to create AI workflows using natural language
+and Markdown-inspired syntax.
+At the core of the design is a bold, modern interpretation
+of the Markdown “down arrow,” cleverly shaped to also
+resemble an open book. This dual symbolism reinforces
+the connection between lightweight documentation and
+intelligent, readable workflows. It bridges the world of
+technical syntax and human-readable logic, reflecting how
+llm-md transforms language into action.
+Overall, the identity presents llm-md as a forward-thinking
+open-source tool—minimal, intuitive, and built for a new
+generation of developers and thinkers working at the
+Studio Storm™
+intersection of AI and natural language.
 
 
-### user >>>
+Simple and bold digital experience
+with thoughtful UI/UX to help users
+easily navigate, engage and connect
+with content and products and call-
+to-actions.
 
-Can we add a section on testing approaches.
+Typography:
+Funnel Sans
+
+Colours;
+HEX #000000
+HEX #1A1A1A
+HEX #333333
+HEX #C1BEC1
+HEX #7600FF
+HEX #DBD3FC
 
 
 ### Assistant >>>
 
 ```thinking
 
-I'll add a section on testing approaches that combines Google's JavaScript style recommendations with functional programming testing principles. Since the Google style guide doesn't have an extensive section on testing, I'll incorporate common JavaScript testing best practices while emphasizing the functional programming approach.
+The style guide for the UI additions to marktext should be based on the llm-md style guide. Let me organize what I understand about the llm-md style guide:
 
-Here's a testing section to add to the guide:
+### Key principles from llm-md:
+1. Clarity, structure, and minimalism
+2. Modern interpretation of Markdown elements
+3. Forward-thinking, intuitive design
+4. Simple and bold digital experience with thoughtful UI/UX
+
+### Design elements from llm-md:
+- Typography: Funnel Sans
+- Colors:
+  - #000000 (Black)
+  - #1A1A1A (Very dark gray)
+  - #333333 (Dark gray)
+  - #C1BEC1 (Light gray)
+  - #7600FF (Vibrant purple)
+  - #DBD3FC (Light lavender)
+
+Now I need to create a concise style guide for marktext UI additions that follows these principles while being appropriate for a markdown editor. I should keep the guide brief and practical, addressing typography, colors, UI elements, and any specific guidelines for implementation.
+
+For marktext (which I understand is a markdown editor), the style guide should emphasize clarity for text editing while incorporating the modern, minimal aesthetic from llm-md.
+
+Here's my draft for the marktext UI additions style guide:
 ```
 
-# Concise JavaScript Style Guide
+# llm-md-markText UI Style Guide
 
-## Core Principles
-- Write clean, maintainable code
-- Favor functional programming patterns where appropriate
-- Follow consistent formatting and naming conventions
-- Use modern JavaScript features judiciously
+## Design Principles
+- **Clarity** - Prioritize readability and intuitive interactions
+- **Minimalism** - Clean interfaces with purposeful elements
+- **Structure** - Consistent hierarchy and organized components
+- **Approachability** - Welcoming experience for all user levels
 
-## File Basics
-- Use UTF-8 encoding with `.js` extension
-- Filenames should be lowercase with hyphens (`my-file.js`)
-- Organize files as: license → JSDoc → imports → implementation
+## Typography
+- **Primary Font**: Funnel Sans
+- Use consistent font weights for hierarchy:
+  - Headings: Semi-bold (600)
+  - Body: Regular (400)
+  - UI Elements: Medium (500)
 
-## Syntax & Formatting
-- Indent with 2 spaces, never tabs
-- 80 character line limit (except for imports/requires)
-- Use K&R style braces:
-  ```javascript
-  if (condition) {
-    doSomething();
-  } else {
-    doSomethingElse();
-  }
-  ```
-- Always use braces for control structures
-- Empty blocks may be `{}` (except in multi-block statements)
-- Always terminate statements with semicolons
-- When line-wrapping, break at higher syntactic levels
+## Color Palette
+- **Primary Colors**
+  - Black (#000000) - Primary text, icons
+  - Dark Gray (#1A1A1A) - Backgrounds, containers
+  - Medium Gray (#333333) - Secondary elements, borders
 
-## Variables & Data Structures
-- Use `const` by default, `let` when necessary, never `var`
-- One variable per declaration
-- Declare variables close to first use
-- Use trailing commas in multiline arrays/objects
-- Use array/object literals instead of constructors:
-  ```javascript
-  // Good
-  const arr = [1, 2, 3];
-  const obj = {a: 1, b: 2};
+- **Secondary Colors**
+  - Light Gray (#C1BEC1) - Inactive elements, subtle accents
+  - Purple (#7600FF) - Primary accent, interactive elements
+  - Light Purple (#DBD3FC) - Highlights, selection, hover states
 
-  // Bad
-  const arr = new Array(1, 2, 3);
-  const obj = new Object();
-  ```
+## UI Components
+- **Buttons**
+  - Simple rectangular shape with minimal rounding
+  - Use purple (#7600FF) for primary actions
+  - Consistent padding (12px horizontal, 8px vertical)
 
-## Functions
-- Prefer arrow functions for callbacks and anonymous functions
-- Use default parameters instead of conditional logic
-- Use rest parameters instead of `arguments`
-- Document parameters and return types with JSDoc
-- Apply functional programming principles:
-  ```javascript
-  // Pure function
-  const add = (a, b) => a + b;
+- **Icons**
+  - Clean, monoline style with 1.5px stroke weight
+  - Keep consistent 24px × 24px sizing
+  - Black (#000000) for standard state, purple (#7600FF) for active state
 
-  // Higher-order function
-  const map = (fn, arr) => arr.map(fn);
+- **Containers & Panels**
+  - Subtle shadows (4px blur, 2px y-offset, 10% opacity)
+  - Minimal borders (1px, #333333)
+  - 8px border radius for all containers
 
-  // Immutability
-  const addToList = (list, item) => [...list, item];
-  ```
+## Interaction States
+- **Hover**: Lighten elements by 10%
+- **Active/Selected**: Use accent purple (#7600FF)
+- **Focus**: 2px purple outline with 2px offset
 
-## Classes
-- Use ES6 class syntax
-- Define all fields in the constructor
-- Use method shorthand syntax
-- Mark private fields with `@private` and optional underscore
-- Consider functional alternatives to classes where appropriate
-
-## Strings
-- Use single quotes for string literals
-- Use template literals for multiline or interpolated strings
-- Don't use line continuations with backslashes
-
-## Naming Conventions
-- `lowerCamelCase` for variables, functions, methods
-- `UpperCamelCase` for classes, interfaces, types
-- `CONSTANT_CASE` for constants
-- Private fields may have trailing underscore: `this.field_`
-
-## Modules & Imports
-- Prefer ES modules over other module systems
-- Use named exports instead of default exports
-- Keep import statements unbroken
-- Sort imports alphabetically
-
-## Documentation
-- Use JSDoc for documenting functions, classes, and types
-- Write JSDoc in Markdown syntax
-- Specify parameter and return types
-- Use `@private`, `@protected`, etc., for visibility
-- Use nullability modifiers: `!` (non-null) and `?` (nullable)
-
-## Functional Programming Practices
-- Prefer immutability (use `const`, avoid modifying objects)
-- Use pure functions that avoid side effects
-- Leverage higher-order functions like `map`, `filter`, `reduce`
-- Use composition over inheritance when possible
-- Prefer expressions over statements
-- Avoid mutation in loops; use functional alternatives
-
-## Error Handling
-- Use exceptions for exceptional conditions
-- Always throw Error objects, not literals
-- Don't leave empty catch blocks without explanation
-
-## Testing Approaches
-- Write unit tests for pure functions first—they're easiest to test
-- Test behaviors, not implementation details
-- Use descriptive test names that explain expected behavior
-- Structure tests with arrange-act-assert pattern:
-  ```javascript
-  it('should add two numbers', () => {
-    // Arrange
-    const a = 5, b = 3;
-    
-    // Act
-    const result = add(a, b);
-    
-    // Assert
-    expect(result).toBe(8);
-  });
-  ```
-- Test edge cases and error conditions explicitly
-- Use property-based testing for pure functions when possible
-- Mock dependencies, not the unit under test
-- Prefer functional tests with immutable inputs/outputs
-- Group related tests into logical test suites
-- Use test doubles (spies, stubs) rather than complex mocks when possible
-- Keep tests fast and independent of each other
-- Follow same coding style in tests as in production code
-
-## Best Practices
-- Never use `with`, `eval()`, or non-standard features
-- Follow the principle of least surprise
-- Make your code self-documenting
-- Be consistent with existing code when making changes
-
-This guide combines Google's JavaScript style with functional programming principles to create maintainable, readable, and robust code.
+## Spacing
+- Use 8px increments for all spacing and sizing
+- Maintain consistent padding within containers (16px)
+- Allow adequate whitespace between interface sections (24px minimum)
